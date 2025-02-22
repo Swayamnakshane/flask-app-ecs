@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+   demoapp:
+      image: pythonapp:latest
+      container_name: "escpyap"
+      ports:
+        - "80:80"
