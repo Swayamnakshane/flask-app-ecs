@@ -27,7 +27,7 @@ pipeline{
         }
         stage("deploy"){
             steps {
-                sh "docker run -itd --name flaskapp -p 80:80 chatapp:latest"
+                sh "docker run -itd --name appfla -p 80:80 chatapp:latest"
             }
         }
     }
