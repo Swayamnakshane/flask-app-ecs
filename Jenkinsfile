@@ -6,6 +6,11 @@ pipeline{
                 git url:"https://github.com/Swayamnakshane/flask-app-ecs.git",branch: "main"
             }
         }
+        stage("trivy scan"){
+            steps {
+                sh "trivy fs . -o results.jason"
+            }
+        }
         stage("build"){
             steps {
                 sh "docker build -t chatapp ."
